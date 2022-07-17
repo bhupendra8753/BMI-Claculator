@@ -16,7 +16,7 @@ let bmiCaluator = (req, res) => {
 		if(isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0){
 			return res.status(200).json({
 				status: false, 
-				message: "Input parameter values must be positive numbers"
+				message: "Input parameter values must be positive numbers or May be missing"
 			});	
 		} else {
 			let bmi = weight / Math.pow(height, 2);
